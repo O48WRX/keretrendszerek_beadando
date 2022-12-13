@@ -1,0 +1,50 @@
+DROP SCHEMA keretrendszer;
+DROP TABLE processzor;
+DROP TABLE vga;
+
+
+
+CREATE SCHEMA keretrendszer;
+
+
+
+CREATE TABLE processzor (
+	id  INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    nev VARCHAR(255) NOT NULL,
+    ar INT NOT NULL
+);
+
+INSERT INTO processzor VALUES 
+(DEFAULT, "i9-10900K", 170000),(DEFAULT, "i7-6700K", 80000),(DEFAULT, "Ryzen 7 5800X", 13000);
+
+CREATE TABLE vga (
+	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    nev VARCHAR(20) NOT NULL
+);
+
+INSERT INTO vga VALUES 
+(DEFAULT, "Asus RTX 3080"),(DEFAULT, "MSI RTX 3080"),(DEFAULT, "RX 6900");
+
+CREATE TABLE ram (
+	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    nev VARCHAR(255)
+);
+
+INSERT INTO ram VALUES
+(DEFAULT, "Kingston 8GB"),(DEFAULT, "Kingston Fury 16GB"),(DEFAULT, "G.Skill Trident Z");
+
+
+CREATE TABLE rig (
+	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    proc_id INT NOT NULL,
+    vga_id INT NOT NULL,
+    mem_id INT NOT NULL,
+    
+    FOREIGN KEY (proc_id) REFERENCES processzor(id),
+    FOREIGN KEY (vga_id) REFERENCES vga(id),
+    FOREIGN KEY (mem_id) REFERENCES ram(id)
+);
+
+INSERT INTO rig VALUES
+(DEFAULT, 1, 1, 1),(DEFAULT,1,3,1),(DEFAULT,3,3,3);
+
