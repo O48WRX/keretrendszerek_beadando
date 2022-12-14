@@ -108,6 +108,8 @@ rem                   Example (all one line)
 rem                   set TITLE=Tomcat.Cluster#1.Server#1 [%DATE% %TIME%]
 rem ---------------------------------------------------------------------------
 
+set JAVA_HOME=""C:\Program Files\Java\jdk1.8.0_341""
+set JRE_HOME="..\..\..\JRE\jre1.8.0_341"
 setlocal
 
 rem Suppress Terminate batch job on CTRL+C
