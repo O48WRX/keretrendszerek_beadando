@@ -15,6 +15,7 @@ public class Ram implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	private String nev;
@@ -30,9 +31,6 @@ public class Ram implements Serializable {
 		return this.id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getNev() {
 		return this.nev;

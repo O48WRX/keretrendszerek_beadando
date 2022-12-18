@@ -14,6 +14,7 @@ public class Rig implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	//bi-directional many-to-one association to Processzor
@@ -37,9 +38,6 @@ public class Rig implements Serializable {
 		return this.id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public Processzor getProcesszor() {
 		return this.processzor;
