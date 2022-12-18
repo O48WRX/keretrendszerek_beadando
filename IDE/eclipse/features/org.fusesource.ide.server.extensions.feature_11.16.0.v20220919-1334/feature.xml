@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.fusesource.ide.server.extensions.feature"
+      label="%featureName"
+      version="11.16.0.v20220919-1334"
+      provider-name="%providerName"
+      plugin="org.fusesource.ide.tooling">
+
+   <description url="https://tools.jboss.org/features/fusetools.html">
+      %description
+   </description>
+
+   <copyright url="https://redhat.com/">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.core.commands" version="3.6.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.resources" version="3.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.10.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.debug.core" version="3.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.debug.ui" version="3.10.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.common" version="2.10.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.equinox.security" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jdt.core" version="3.10.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jdt.debug.ui" version="3.6.300" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jdt.launching" version="3.7.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface" version="3.10.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jst.common.project.facet.core" version="1.4.400" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jst.server.core" version="1.2.400" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.swt" version="3.103.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui" version="3.106.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.forms" version="3.6.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.navigator" version="3.5.400" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.wst.common.modulecore" version="1.2.400" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.wst.common.project.facet.core" version="1.4.300" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.wst.server.core" version="1.6.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.wst.server.ui" version="1.5.0" match="greaterOrEqual"/>
+      <import plugin="org.jboss.ide.eclipse.as.wtp.core" version="3.0.0" match="greaterOrEqual"/>
+      <import plugin="org.jboss.ide.eclipse.as.wtp.ui" version="3.0.0" match="greaterOrEqual"/>
+      <import plugin="org.jboss.tools.as.runtimes.integration" version="3.0.0" match="greaterOrEqual"/>
+      <import feature="org.fusesource.ide.core.feature" version="10.0.0" match="greaterOrEqual"/>
+      <import feature="org.jboss.tools.foundation.feature" version="1.1.0" match="greaterOrEqual"/>
+      <import feature="org.jboss.tools.stacks.core.feature" version="1.1.0" match="greaterOrEqual"/>
+      <import feature="org.jboss.tools.runtime.core.feature" version="3.0.0" match="greaterOrEqual"/>
+      <import feature="org.jboss.ide.eclipse.archives.feature" version="3.5.0" match="greaterOrEqual"/>
+      <import feature="org.jboss.tools.jmx.feature" version="1.6.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.fusesource.ide.server.karaf.core"
+         download-size="140"
+         install-size="386"
+         version="11.16.0.v20220919-1334"
+         unpack="false"/>
+
+   <plugin
+         id="org.fusesource.ide.server.karaf.ui"
+         download-size="79"
+         install-size="247"
+         version="11.16.0.v20220706-1139"
+         unpack="false"/>
+
+   <plugin
+         id="org.fusesource.ide.server.fuse.core"
+         download-size="30"
+         install-size="154"
+         version="11.16.0.v20220706-1139"
+         unpack="false"/>
+
+   <plugin
+         id="org.fusesource.ide.server.fuse.ui"
+         download-size="35"
+         install-size="147"
+         version="11.16.0.v20220706-1139"
+         unpack="false"/>
+
+   <plugin
+         id="org.fusesource.ide.server.commons"
+         download-size="28"
+         install-size="77"
+         version="11.16.0.v20220706-1139"
+         unpack="false"/>
+
+</feature>

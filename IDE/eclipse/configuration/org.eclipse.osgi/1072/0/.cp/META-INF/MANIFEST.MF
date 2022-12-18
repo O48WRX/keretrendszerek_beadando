@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.5.2
+Build-Jdk-Spec: 17
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.fusesource.ide.branding;singleton:=true
+Bundle-Version: 11.16.0.v20220706-1139
+Bundle-Vendor: %Bundle-Vendor
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Activator: org.fusesource.ide.branding.Activator
+Bundle-ActivationPolicy: lazy
+Export-Package: org.fusesource.ide.branding,org.fusesource.ide.branding.
+ perspective,org.fusesource.ide.branding.wizards;x-friends:="org.fusesou
+ rce.ide.branding.tests.integration"
+Require-Bundle: org.eclipse.ui;bundle-version="3.106.0",org.eclipse.ui.i
+ de;bundle-version="3.10.0",org.eclipse.core.runtime;bundle-version="3.1
+ 0.0",org.eclipse.core.resources;bundle-version="3.9.0",org.eclipse.ui.f
+ orms;bundle-version="3.6.100",org.eclipse.m2e.core;bundle-version="1.5.
+ 0",org.eclipse.jdt.core;bundle-version="3.10.0",org.eclipse.jdt.ui;bund
+ le-version="3.10.0",org.eclipse.jdt.junit;bundle-version="3.12.0",org.e
+ clipse.jface.text;bundle-version="3.9.0",org.eclipse.ltk.core.refactori
+ ng;bundle-version="3.6.100",org.eclipse.m2e.maven.runtime,org.eclipse.d
+ ebug.ui;bundle-version="3.12.50",org.jboss.tools.foundation.core;bundle
+ -version="1.2.0",org.fusesource.ide.maven;bundle-version="10.0.0",org.f
+ usesource.ide.foundation.core;bundle-version="10.0.0",org.fusesource.id
+ e.foundation.ui;bundle-version="10.0.0",org.fusesource.ide.camel.model.
+ service.core;bundle-version="10.0.0"
+Eclipse-SourceReferences: scm:git:https://github.com/jbosstools/jbosstoo
+ ls-fuse.git;path="editor/plugins/org.fusesource.ide.branding";commitId=
+ 20494168eec097ed71bded751089feec5a12fbec
+Bundle-License: Eclipse Public License;link="http://www.eclipse.org/lega
+ l/epl-v10.html"
+
