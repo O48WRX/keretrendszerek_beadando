@@ -4,6 +4,8 @@
 	<comment></comment>
 	<projects>
 		<project>JPA</project>
+		<project>EJB</project>
+		<project>EJBClient</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
