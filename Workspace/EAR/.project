@@ -3,6 +3,7 @@
 	<name>EAR</name>
 	<comment></comment>
 	<projects>
+		<project>JPA</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
