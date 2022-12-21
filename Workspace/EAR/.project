@@ -6,6 +6,7 @@
 		<project>JPA</project>
 		<project>EJB</project>
 		<project>EJBClient</project>
+		<project>WEB</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
