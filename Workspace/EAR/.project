@@ -7,6 +7,7 @@
 		<project>EJB</project>
 		<project>EJBClient</project>
 		<project>WEB</project>
+		<project>SERVLET</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
