@@ -3453,3 +3453,12 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2022-12-21 16:41:31.716
+!MESSAGE The server "WildFly 24+" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. D:\Repositories\Keretrendszerek beadandó\JRE\jre1.8.0_341 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2022-12-21 16:41:31.864
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2022-12-21 16:41:46.490
+!MESSAGE Server Startup Succeeded
