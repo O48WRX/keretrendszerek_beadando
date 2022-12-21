@@ -313,3 +313,8 @@
 2022-12-21 16:41:46,121 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 79) HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
 2022-12-21 16:41:46,245 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 80) WFLYUT0021: Registered web context: '/SERVLET' for server 'default-server'
 2022-12-21 16:41:46,245 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 78) WFLYUT0021: Registered web context: '/WEB' for server 'default-server'
+2022-12-21 16:41:46,316 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "EAR.ear" (runtime-name : "EAR.ear")
+2022-12-21 16:41:46,370 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2022-12-21 16:41:46,372 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 26.1.2.Final (WildFly Core 18.1.2.Final) started in 13617ms - Started 551 of 737 services (353 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml
+2022-12-21 16:41:46,374 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2022-12-21 16:41:46,374 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
