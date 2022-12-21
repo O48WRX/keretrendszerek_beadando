@@ -1,5 +1,6 @@
 package com.ekke.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.LocalBean;
@@ -24,7 +25,7 @@ public class ProcesszorEJB implements ProcesszorEJBLocal {
 	@Override
 	public List<Processzor> getList() {
 		// TODO Auto-generated method stub
-		return null;
+		return new ArrayList<Processzor>();
 	}
 
 }
