@@ -1807,3 +1807,25 @@ WFLYCTL0185:    Newly corrected services:
 2022-12-23 19:06:08,236 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 78) HHH000397: Using ASTQueryTranslatorFactory
 2022-12-23 19:06:08,538 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 79) WFLYUT0021: Registered web context: '/WEB' for server 'default-server'
 2022-12-23 19:06:08,538 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 81) WFLYUT0021: Registered web context: '/SERVLET' for server 'default-server'
+2022-12-23 19:06:08,587 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0010: Deployed "derbyclient.jar" (runtime-name : "derbyclient.jar")
+2022-12-23 19:06:08,587 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "EAR.ear" (runtime-name : "EAR.ear")
+2022-12-23 19:06:08,612 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2022-12-23 19:06:08,614 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 26.1.2.Final (WildFly Core 18.1.2.Final) started in 3549ms - Started 666 of 850 services (357 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml
+2022-12-23 19:06:08,616 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2022-12-23 19:06:08,616 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2022-12-23 19:06:20,413 INFO  [org.hibernate.jpa.internal.util.LogHelper] (default task-1) HHH000204: Processing PersistenceUnitInfo [
+	name: JPA
+	...]
+2022-12-23 19:06:20,427 INFO  [org.hibernate.dialect.Dialect] (default task-1) HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+2022-12-23 19:06:20,428 WARN  [org.hibernate.dialect.DerbyDialect] (default task-1) HHH000328: Unable to load/access derby driver class sysinfo to check versions : org.apache.derby.tools.sysinfo from [Module "org.hibernate" version 5.3.28.Final from local module loader @57829d67 (finder: local module finder @19dfb72a (roots: D:\Repositories\Keretrendszerek beadandó\Servers\wildfly-26.1.2.Final\modules,D:\Repositories\Keretrendszerek beadandó\Servers\wildfly-26.1.2.Final\modules\system\layers\base))]
+2022-12-23 19:06:20,434 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (default task-1) Envers integration enabled? : true
+2022-12-23 19:06:20,440 INFO  [org.hibernate.orm.beans] (default task-1) HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
+2022-12-23 19:06:20,455 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (default task-1) HHH000397: Using ASTQueryTranslatorFactory
+2022-12-23 19:06:20,736 INFO  [org.hibernate.jpa.internal.util.LogHelper] (default task-1) HHH000204: Processing PersistenceUnitInfo [
+	name: JPA
+	...]
+2022-12-23 19:06:20,740 INFO  [org.hibernate.dialect.Dialect] (default task-1) HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
+2022-12-23 19:06:20,740 WARN  [org.hibernate.dialect.DerbyDialect] (default task-1) HHH000328: Unable to load/access derby driver class sysinfo to check versions : org.apache.derby.tools.sysinfo from [Module "org.hibernate" version 5.3.28.Final from local module loader @57829d67 (finder: local module finder @19dfb72a (roots: D:\Repositories\Keretrendszerek beadandó\Servers\wildfly-26.1.2.Final\modules,D:\Repositories\Keretrendszerek beadandó\Servers\wildfly-26.1.2.Final\modules\system\layers\base))]
+2022-12-23 19:06:20,745 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (default task-1) Envers integration enabled? : true
+2022-12-23 19:06:20,750 INFO  [org.hibernate.orm.beans] (default task-1) HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
+2022-12-23 19:06:20,763 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (default task-1) HHH000397: Using ASTQueryTranslatorFactory
