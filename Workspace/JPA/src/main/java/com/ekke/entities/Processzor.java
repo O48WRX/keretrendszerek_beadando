@@ -75,4 +75,11 @@ public class Processzor implements Serializable {
 		return rig;
 	}
 
+	@Override
+	public String toString() {
+		return "Processzor [id=" + id + ", ar=" + ar + ", nev=" + nev + "]";
+	}
+	
+	
+
 }
