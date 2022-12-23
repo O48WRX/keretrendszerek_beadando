@@ -134,6 +134,14 @@
                         <password>sa</password>
                     </security>
                 </datasource>
+                <datasource jndi-name="java:/derbydb" pool-name="DerbyDB">
+                    <connection-url>jdbc:derby://localhost:1527/keretrendszer;create=true</connection-url>
+                    <driver>derbyclient.jar</driver>
+                    <security>
+                        <user-name>root</user-name>
+                        <password>root</password>
+                    </security>
+                </datasource>
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
@@ -509,4 +517,9 @@
             <remote-destination host="${jboss.mail.server.host:localhost}" port="${jboss.mail.server.port:25}"/>
         </outbound-socket-binding>
     </socket-binding-group>
+    <deployments>
+        <deployment name="derbyclient.jar" runtime-name="derbyclient.jar">
+            <content sha1="6c939f29ef270ad230db4bd93374e6c1536f224c"/>
+        </deployment>
+    </deployments>
 </server>
