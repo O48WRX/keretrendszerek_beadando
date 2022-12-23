@@ -7,6 +7,7 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 import com.ekke.entities.Processzor;
+import com.ekke.models.ProcesszorTable;
 
 /**
  * Session Bean implementation class ProcesszorEJB
@@ -25,7 +26,9 @@ public class ProcesszorEJB implements ProcesszorEJBLocal {
 	@Override
 	public List<Processzor> getList() {
 		// TODO Auto-generated method stub
-		return new ArrayList<Processzor>();
+		//return new ArrayList<Processzor>();
+		ProcesszorTable pt = new ProcesszorTable();
+		return pt.getList();
 	}
 
 }
