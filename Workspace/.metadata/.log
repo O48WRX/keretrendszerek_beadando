@@ -5542,3 +5542,33 @@ org.eclipse.core.runtime.CoreException: No property tester contributes a propert
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 !SUBENTRY 1 org.eclipse.core.expressions 4 201 2022-12-23 18:52:25.066
 !MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2022-12-23 18:57:47.259
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2022-12-23 18:57:47.460
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2022-12-23 18:57:48.150
+!MESSAGE The server "WildFly 24+" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. D:\Repositories\Keretrendszerek beadandó\JRE\jre1.8.0_341 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2022-12-23 18:57:48.157
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2022-12-23 18:57:51.882
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2022-12-23 19:06:04.790
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2022-12-23 19:06:04.993
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2022-12-23 19:06:05.002
+!MESSAGE The server "WildFly 24+" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. D:\Repositories\Keretrendszerek beadandó\JRE\jre1.8.0_341 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2022-12-23 19:06:05.009
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2022-12-23 19:06:08.634
+!MESSAGE Server Startup Succeeded

@@ -138,7 +138,7 @@
                     <connection-url>jdbc:derby://localhost:1527/keretrendszer;create=true</connection-url>
                     <driver>derbyclient.jar</driver>
                     <security>
-                        <user-name>App</user-name>
+                        <user-name>root</user-name>
                         <password>root</password>
                     </security>
                 </datasource>

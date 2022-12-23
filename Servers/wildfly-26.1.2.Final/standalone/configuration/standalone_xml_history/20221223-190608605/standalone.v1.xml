@@ -134,14 +134,6 @@
                         <password>sa</password>
                     </security>
                 </datasource>
-                <datasource jndi-name="java:/derbydb" pool-name="DerbyDB">
-                    <connection-url>jdbc:derby://localhost:1527/keretrendszer;create=true</connection-url>
-                    <driver>derbyclient.jar</driver>
-                    <security>
-                        <user-name>App</user-name>
-                        <password>root</password>
-                    </security>
-                </datasource>
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
