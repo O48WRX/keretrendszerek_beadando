@@ -9,7 +9,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import com.ekke.entities.Processzor;
-import com.ekke.models.ProcesszorTable;
 
 /**
  * Session Bean implementation class ProcesszorEJB

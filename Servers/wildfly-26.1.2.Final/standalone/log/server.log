@@ -193,3 +193,9 @@
 2022-12-24 15:09:56,550 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 78) HHH000397: Using ASTQueryTranslatorFactory
 2022-12-24 15:09:56,963 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 79) WFLYUT0021: Registered web context: '/SERVLET' for server 'default-server'
 2022-12-24 15:09:56,963 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 81) WFLYUT0021: Registered web context: '/WEB' for server 'default-server'
+2022-12-24 15:09:57,067 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0010: Deployed "derbyclient.jar" (runtime-name : "derbyclient.jar")
+2022-12-24 15:09:57,067 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "EAR.ear" (runtime-name : "EAR.ear")
+2022-12-24 15:09:57,105 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2022-12-24 15:09:57,107 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 26.1.2.Final (WildFly Core 18.1.2.Final) started in 15533ms - Started 667 of 851 services (357 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml
+2022-12-24 15:09:57,146 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2022-12-24 15:09:57,147 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
