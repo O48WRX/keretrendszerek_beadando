@@ -6,6 +6,7 @@ import java.util.List;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceContext;
 
 import com.ekke.entities.Processzor;
@@ -38,21 +39,27 @@ public class ProcesszorEJB implements ProcesszorEJBLocal {
 	}
 
 	@Override
-	public void deleteProcesszor(Processzor p) {
+	public void deleteProcesszor(int id) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void updateProcesszor(Processzor p) {
+	public void updateProcesszor(int id, int ar, String nev) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void createProcesszor(Processzor p) {
-		// TODO Auto-generated method stub
+	public void createProcesszor(int ar, String nev) {
+		EntityTransaction t = em.getTransaction();
 		
+		t.begin();
+		Processzor newProc = new Processzor();
+		newProc.setAr(ar);
+		newProc.setNev(nev);
+		em.persist(newProc);
+		t.commit();
 	}
 
 }
