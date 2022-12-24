@@ -37,4 +37,22 @@ public class ProcesszorEJB implements ProcesszorEJBLocal {
 		
 	}
 
+	@Override
+	public void deleteProcesszor(Processzor p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateProcesszor(Processzor p) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void createProcesszor(Processzor p) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
