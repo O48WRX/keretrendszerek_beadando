@@ -46,8 +46,12 @@ public class ProcesszorEJB implements ProcesszorEJBLocal {
 
 	@Override
 	public void updateProcesszor(int id, int ar, String nev) {
-		// TODO Auto-generated method stub
-		
+		EntityTransaction t = em.getTransaction();
+		t.begin();
+		Processzor proc = em.find(Processzor.class, id);
+		proc.setAr(ar);
+		proc.setNev(nev);
+		t.commit();
 	}
 
 	@Override
