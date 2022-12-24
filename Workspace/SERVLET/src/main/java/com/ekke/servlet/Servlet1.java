@@ -45,7 +45,7 @@ public class Servlet1 extends HttpServlet {
 		
 		List<Processzor> list = ejbSource.getList();
 		for(Processzor p : list) {
-			response.getWriter().append("p".toString());
+			response.getWriter().append(p.toString());
 		}
 	}
 

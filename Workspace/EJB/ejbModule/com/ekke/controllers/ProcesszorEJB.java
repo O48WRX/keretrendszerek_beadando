@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import com.ekke.entities.Processzor;
 import com.ekke.models.ProcesszorTable;
@@ -22,13 +24,18 @@ public class ProcesszorEJB implements ProcesszorEJBLocal {
     public ProcesszorEJB() {
         // TODO Auto-generated constructor stub
     }
-
+    
+    @PersistenceContext
+    EntityManager em;
+    
 	@Override
 	public List<Processzor> getList() {
 		// TODO Auto-generated method stub
 		//return new ArrayList<Processzor>();
-		ProcesszorTable pt = new ProcesszorTable();
-		return pt.getList();
+		/*ProcesszorTable pt = new ProcesszorTable();
+		return pt.getList(); */
+		return em.createNamedQuery("Processzor.findAll", Processzor.class).getResultList();
+		
 	}
 
 }
