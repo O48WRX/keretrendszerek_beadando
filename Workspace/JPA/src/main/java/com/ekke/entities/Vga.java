@@ -65,4 +65,11 @@ public class Vga implements Serializable {
 		return rig;
 	}
 
+	@Override
+	public String toString() {
+		return "Vga [id=" + id + ", nev=" + nev + "]";
+	}
+	
+	
+
 }
