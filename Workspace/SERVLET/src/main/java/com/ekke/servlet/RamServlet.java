@@ -1,6 +1,7 @@
 package com.ekke.servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -9,7 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.ekke.controllers.ProcesszorEJBLocal;
+import com.ekke.controllers.RamEJBLocal;
+import com.ekke.entities.Ram;
 
 /**
  * Servlet implementation class RamServlet
@@ -23,7 +25,7 @@ public class RamServlet extends HttpServlet {
      */
 	
 	@EJB
-    ProcesszorEJBLocal ejbSource;
+    RamEJBLocal ejbSource;
 	
 	
     public RamServlet() {
@@ -35,8 +37,10 @@ public class RamServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		List<Ram> list = ejbSource.getList();
+		for(Ram p : list) {
+			response.getWriter().append(p.toString());
+		}
 	}
 
 	/**
