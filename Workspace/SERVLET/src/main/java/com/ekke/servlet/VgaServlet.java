@@ -1,6 +1,7 @@
 package com.ekke.servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ekke.controllers.vgaEJBLocal;
+import com.ekke.entities.Vga;
 
 /**
  * Servlet implementation class VgaServlet
@@ -35,8 +37,10 @@ public class VgaServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		List<Vga> list = ejbSource.getList();
+		for(Vga p : list) {
+			response.getWriter().append(p.toString());
+		}
 	}
 
 	/**
