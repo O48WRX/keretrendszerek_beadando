@@ -18,6 +18,11 @@ public class Ram implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 
+	@Override
+	public String toString() {
+		return "Ram [id=" + id + ", nev=" + nev + "]";
+	}
+
 	private String nev;
 
 	//bi-directional many-to-one association to Rig

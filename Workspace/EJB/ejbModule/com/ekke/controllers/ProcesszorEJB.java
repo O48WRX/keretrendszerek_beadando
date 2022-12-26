@@ -30,12 +30,7 @@ public class ProcesszorEJB implements ProcesszorEJBLocal {
     
 	@Override
 	public List<Processzor> getList() {
-		// TODO Auto-generated method stub
-		//return new ArrayList<Processzor>();
-		/*ProcesszorTable pt = new ProcesszorTable();
-		return pt.getList(); */
 		return em.createNamedQuery("Processzor.findAll", Processzor.class).getResultList();
-		
 	}
 
 	@Override
@@ -50,6 +45,7 @@ public class ProcesszorEJB implements ProcesszorEJBLocal {
 	@Override
 	public void updateProcesszor(int id, int ar, String nev) {
 		EntityTransaction t = em.getTransaction();
+		
 		t.begin();
 		Processzor proc = em.find(Processzor.class, id);
 		proc.setAr(ar);
