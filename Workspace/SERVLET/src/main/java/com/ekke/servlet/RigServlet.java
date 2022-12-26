@@ -1,6 +1,7 @@
 package com.ekke.servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ekke.controllers.RigEJBLocal;
+import com.ekke.entities.Rig;
 
 /**
  * Servlet implementation class RigServlet
@@ -34,8 +36,10 @@ public class RigServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		List<Rig> list = ejbSource.getList();
+		for(Rig p : list) {
+			response.getWriter().append(p.toString());
+		}
 	}
 
 	/**
