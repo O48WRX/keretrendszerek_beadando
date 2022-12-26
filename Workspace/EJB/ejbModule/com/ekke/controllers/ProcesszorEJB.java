@@ -36,6 +36,7 @@ public class ProcesszorEJB implements ProcesszorEJBLocal {
 	@Override
 	public void deleteProcesszor(int id) {
 		EntityTransaction t =em.getTransaction();
+		
 		t.begin();
 		Processzor remProc = em.find(Processzor.class, id);
 		em.remove(remProc);
