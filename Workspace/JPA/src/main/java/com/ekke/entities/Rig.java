@@ -66,4 +66,11 @@ public class Rig implements Serializable {
 		this.vga = vga;
 	}
 
+	@Override
+	public String toString() {
+		return "Rig [id=" + id + ", processzor=" + processzor + ", ram=" + ram + ", vga=" + vga + "]";
+	}
+	
+	
+
 }
