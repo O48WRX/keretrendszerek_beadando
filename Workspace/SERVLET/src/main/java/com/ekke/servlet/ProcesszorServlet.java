@@ -10,7 +10,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.json.stream.*;
+
+import com.google.gson.*;
 
 import com.ekke.controllers.ProcesszorEJBLocal;
 import com.ekke.entities.Processzor;
@@ -38,11 +39,10 @@ public class ProcesszorServlet extends HttpServlet {
     ProcesszorEJBLocal ejbSource;
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		JsonParser parser = new JsonParser();
 		List<Processzor> list = ejbSource.getList();
-		response.setContentType("application/json");
+		response.setContentType("text/html;charset=UTF-8");
 		for(Processzor p : list) {
-			response.getWriter().append(p.toString());
+			response.getWriter().append(p.toString() + ", ");
 		}
 	}
 

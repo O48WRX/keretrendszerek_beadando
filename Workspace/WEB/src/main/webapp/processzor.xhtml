@@ -22,28 +22,42 @@
 	<table id="contentTable">
 		<tr>
 			<th>Id</th>
-			<th>Processor</th>
 			<th>Price</th>
+			<th>Processor</th>
 		</tr>
 		<script>
 			var url = "http://localhost:8080/SERVLET/ProcesszorServlet"
-			var responseArray;
-			fetch(url, {
-					method: 'GET',
-					headers: {
-						'Accept': 'application/json',
-					},
-				})
-				.then(response => response.json())
-				.then(data => {
-						responseArray = data.map(item => item)
-					})
-					
-			var tableBodyRef = document.getElementById('contentTable')
+			var responseData
+			var responseArray
+
+			function httpGet(theUrl)
+			{
+			    var xmlHttp = new XMLHttpRequest();
+			    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+			    xmlHttp.send( null );
+			    return xmlHttp.responseText;
+			} 
+
+			responseData = httpGet(url)
+			console.log(responseData)
 			
-			for(var item in responseArray){
-				console.log(item)
+			responseArray = responseData.split(',')
+			console.log(responseArray)
+			
+			var table = document.getElementById("contentTable")
+			
+			for(var i = 0; i &lt; responseArray.length - 1; i++) {
+				var row = table.insertRow()
+				var cell = row.insertCell()
+				var cell1 = row.insertCell()
+				var cell2 = row.insertCell()
+
+				cell.innerHTML = responseArray[i]
+				cell1.innerHTML = responseArray[i + 1]
+				cell2.innerHTML = responseArray[i + 2]
+				i = i + 2
 			}
+			
 		</script>
 	</table>
 	
