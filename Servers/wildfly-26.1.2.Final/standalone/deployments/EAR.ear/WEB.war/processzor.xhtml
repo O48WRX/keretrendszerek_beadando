@@ -23,8 +23,27 @@
 		<tr>
 			<th>Id</th>
 			<th>Processor</th>
+			<th>Price</th>
 		</tr>
 		<script>
+			var url = "http://localhost:8080/SERVLET/ProcesszorServlet"
+			var responseArray;
+			fetch(url, {
+					method: 'GET',
+					headers: {
+						'Accept': 'application/json',
+					},
+				})
+				.then(response => response.json())
+				.then(data => {
+						responseArray = data.map(item => item)
+					})
+					
+			var tableBodyRef = document.getElementById('contentTable')
+			
+			for(var item in responseArray){
+				console.log(item)
+			}
 		</script>
 	</table>
 	

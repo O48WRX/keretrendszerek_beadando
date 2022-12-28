@@ -1,1 +1,14 @@
 Wed Dec 28 17:03:49 CET 2022 : Apache Derby Hálózati kiszolgáló - 10.13.1.1 - (1765088) elindult és kész a kapcsolatok fogadására a(z) {3} 1527 portján 
+----------------------------------------------------------------
+Wed Dec 28 17:22:29 CET 2022:
+ Derby The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088) változat betöltése: a816c00e-0185-5979-bf79-000051e270ea példány
+a(z) D:\Repositories\Keretrendszerek beadandó\Servers\db-derby-10.13.1.1-bin\bin\keretrendszer adatbázis-könyvtáron: sun.misc.Launcher$AppClassLoader@610455d6 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_341-b10
+user.dir=D:\Repositories\Keretrendszerek beadandó\Servers\db-derby-10.13.1.1-bin\bin
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=D:\Repositories\Keretrendszerek beadandó\Servers\db-derby-10.13.1.1-bin\bin
+Az adatbázis-osztálybetöltõ elindult - derby.database.classpath=''

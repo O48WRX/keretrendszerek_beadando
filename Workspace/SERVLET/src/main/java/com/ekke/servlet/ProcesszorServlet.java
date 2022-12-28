@@ -1,6 +1,7 @@
 package com.ekke.servlet;
 
 import java.io.IOException;
+
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -9,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.json.stream.*;
 
 import com.ekke.controllers.ProcesszorEJBLocal;
 import com.ekke.entities.Processzor;
@@ -36,8 +38,9 @@ public class ProcesszorServlet extends HttpServlet {
     ProcesszorEJBLocal ejbSource;
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		JsonParser parser = new JsonParser();
 		List<Processzor> list = ejbSource.getList();
+		response.setContentType("application/json");
 		for(Processzor p : list) {
 			response.getWriter().append(p.toString());
 		}
