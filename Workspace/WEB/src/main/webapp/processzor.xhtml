@@ -13,7 +13,7 @@
 	<hr></hr>
 	<h2>>Add processor</h2>
 	<form method="post">
-		<p>Id: <input type="text" name="pid" value="id" readonly="readonly"></input></p>
+		<p>Id: <input type="text" name="pid" value="id" readonly="readonly" id="idField"></input></p>
 		<p>Name: <input type="text" name="pname"></input>></p>
 		<input type="submit" value="Beküldés"></input>
 	</form>
@@ -53,10 +53,28 @@
 				var cell = row.insertCell()
 				var cell1 = row.insertCell()
 				var cell2 = row.insertCell()
+				var cell3 = row.insertCell()
+				
+				var splitData = responseArray[i].split('=')
+				var storedId = splitData[1]
 
-				cell.innerHTML = responseArray[i]
-				cell1.innerHTML = responseArray[i + 1]
-				cell2.innerHTML = responseArray[i + 2]
+				cell.innerHTML = splitData[1]
+				var splitData = responseArray[i + 1].split('=')
+				cell1.innerHTML = splitData[1]
+				var splitData = responseArray[i + 2].split('=')
+				cell2.innerHTML = splitData[1]
+
+				var btn = document.createElement('input')
+				btn.type = "button";
+				btn.value = "Edit"
+				btn.name = storedId
+				btn.onclick = function () {
+					var idField = document.getElementById("idField")
+					idField.value = btn.name
+				}
+				cell3.appendChild(btn)
+				
+				
 				i = i + 2
 			}
 			
