@@ -12,3 +12,37 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=D:\Repositories\Keretrendszerek beadandó\Servers\db-derby-10.13.1.1-bin\bin
 Az adatbázis-osztálybetöltõ elindult - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Dec 28 20:07:02 CET 2022:
+a816c00e-0185-5979-bf79-000051e270ea példány leállítása
+Wed Dec 28 20:07:02 CET 2022 Thread[DRDAConnThread_4,5,main] (DATABASE = keretrendszer), (DRDAID = {9}), A(z) 'keretrendszer' adatbázis leáll.
+----------------------------------------------------------------
+Wed Dec 28 20:13:32 CET 2022:
+ Derby The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088) változat betöltése: bef90078-0185-5979-bf79-000051e270ea példány
+a(z) D:\Repositories\Keretrendszerek beadandó\Servers\db-derby-10.13.1.1-bin\bin\keretrendszer adatbázis-könyvtáron: sun.misc.Launcher$AppClassLoader@610455d6 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_341-b10
+user.dir=D:\Repositories\Keretrendszerek beadandó\Servers\db-derby-10.13.1.1-bin\bin
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=D:\Repositories\Keretrendszerek beadandó\Servers\db-derby-10.13.1.1-bin\bin
+Az adatbázis-osztálybetöltõ elindult - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Dec 28 22:29:34 CET 2022:
+bef90078-0185-5979-bf79-000051e270ea példány leállítása
+Wed Dec 28 22:29:34 CET 2022 Thread[DRDAConnThread_4,5,main] (DATABASE = keretrendszer), (DRDAID = {18}), A(z) 'keretrendszer' adatbázis leáll.
+----------------------------------------------------------------
+Wed Dec 28 22:30:53 CET 2022:
+ Derby The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088) változat betöltése: 42adc10b-0185-5979-bf79-000051e270ea példány
+a(z) D:\Repositories\Keretrendszerek beadandó\Servers\db-derby-10.13.1.1-bin\bin\keretrendszer adatbázis-könyvtáron: sun.misc.Launcher$AppClassLoader@610455d6 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_341-b10
+user.dir=D:\Repositories\Keretrendszerek beadandó\Servers\db-derby-10.13.1.1-bin\bin
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=D:\Repositories\Keretrendszerek beadandó\Servers\db-derby-10.13.1.1-bin\bin
+Az adatbázis-osztálybetöltõ elindult - derby.database.classpath=''

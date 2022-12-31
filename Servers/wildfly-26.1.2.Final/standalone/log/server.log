@@ -3804,3 +3804,9 @@ Caused by: java.lang.ClassNotFoundException: com.google.gson.Gson from [Module "
 2022-12-28 22:30:54,130 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 79) HHH000397: Using ASTQueryTranslatorFactory
 2022-12-28 22:30:54,443 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 79) WFLYUT0021: Registered web context: '/SERVLET' for server 'default-server'
 2022-12-28 22:30:54,443 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 83) WFLYUT0021: Registered web context: '/WEB' for server 'default-server'
+2022-12-28 22:30:54,480 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0010: Deployed "derbyclient.jar" (runtime-name : "derbyclient.jar")
+2022-12-28 22:30:54,480 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "EAR.ear" (runtime-name : "EAR.ear")
+2022-12-28 22:30:54,503 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2022-12-28 22:30:54,504 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 26.1.2.Final (WildFly Core 18.1.2.Final) started in 3629ms - Started 789 of 973 services (357 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml
+2022-12-28 22:30:54,506 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2022-12-28 22:30:54,506 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
