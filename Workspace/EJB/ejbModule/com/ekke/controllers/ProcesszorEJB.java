@@ -3,6 +3,7 @@ package com.ekke.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.Resource;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

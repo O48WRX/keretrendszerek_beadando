@@ -12,10 +12,11 @@
 	<h1>Processors</h1>
 	<hr></hr>
 	<h2>>Add processor</h2>
-	<form method="post">
-		<p>Id: <input type="text" name="pid" value="id" readonly="readonly" id="idField"></input></p>
-		<p>Name: <input type="text" name="pname"></input>></p>
-		<input type="submit" value="Beküldés"></input>
+	<form method="POST" action="http://localhost:8080/SERVLET/ProcesszorServlet">
+		<p>Id: <input type="text" name="id" value="id" readonly="readonly" id="idField"></input></p>
+		<p>Name: <input type="text" name="nev"></input>></p>
+		<p>Price: <input type="text" name="ar"></input></p>
+		<p><input type="submit" value="Beküldés"></input><input type="submit" value="Törlés"></input></p>
 	</form>
 	<hr></hr>
 	<h2>Processors in storage</h2>
@@ -76,6 +77,27 @@
 				
 				
 				i = i + 2
+			}
+
+
+
+			function sendPost() {
+				var xhr = new XMLHttpRequest();
+				xhr.open('POST', "http://localhost:8080/SERVLET/ProcesszorServlet", true);
+				xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+				xhr.onload = function () {
+				    // do something to response
+				    console.log(this.responseText);
+				};
+				var name = document.getElementByName("nev")
+				var price = document.getElementByName("ar")
+				
+				var data = new FormData()
+				data.append('nev', name.value)
+				data.append('ar', price.value)
+				
+				xhr.send(data)
+				location.reload()
 			}
 			
 		</script>
