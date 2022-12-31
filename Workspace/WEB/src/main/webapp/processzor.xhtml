@@ -70,7 +70,7 @@
 				btn.name = storedId
 				btn.onclick = function () {
 					var idField = document.getElementById("idField")
-					idField.value = btn.name
+					idField.value = event.srcElement.name
 				}
 				cell3.appendChild(btn)
 				
