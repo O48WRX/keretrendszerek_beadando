@@ -66,7 +66,8 @@ public class ProcesszorServlet extends HttpServlet {
 	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		int id = Integer.parseInt(request.getParameter("id"));
+		ejbSource.deleteProcesszor(id);
 	}
 
 }

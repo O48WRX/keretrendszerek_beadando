@@ -16,7 +16,7 @@
 		<p>Id: <input type="text" name="id" value="id" readonly="readonly" id="idField"></input></p>
 		<p>Name: <input type="text" name="nev"></input>></p>
 		<p>Price: <input type="text" name="ar"></input></p>
-		<p><input type="submit" value="Beküldés"></input><input type="submit" value="Törlés"></input></p>
+		<p><input type="submit" value="Beküldés"></input><input type="button" value="Törlés" onclick="sendDelete()"></input></p>
 	</form>
 	<hr></hr>
 	<h2>Processors in storage</h2>
@@ -81,22 +81,18 @@
 
 
 
-			function sendPost() {
+			function sendDelete() {
 				var xhr = new XMLHttpRequest();
-				xhr.open('POST', "http://localhost:8080/SERVLET/ProcesszorServlet", true);
+				var id = document.getElementById("idField")
+				
+				xhr.open('DELETE', "http://localhost:8080/SERVLET/ProcesszorServlet"+"?id="+id.value, true);
 				xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 				xhr.onload = function () {
 				    // do something to response
 				    console.log(this.responseText);
 				};
-				var name = document.getElementByName("nev")
-				var price = document.getElementByName("ar")
 				
-				var data = new FormData()
-				data.append('nev', name.value)
-				data.append('ar', price.value)
-				
-				xhr.send(data)
+				xhr.send(null)
 				location.reload()
 			}
 			

@@ -11214,3 +11214,18 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2023-01-01 17:42:38.055
 !MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2023-01-01 18:12:56.607
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2023-01-01 18:12:56.811
+!MESSAGE Server Shutdown Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2023-01-01 18:12:56.824
+!MESSAGE The server "WildFly 24+" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. D:\Repositories\Keretrendszerek beadandó\JRE\jre1.8.0_341 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2023-01-01 18:12:56.833
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2023-01-01 18:13:00.659
+!MESSAGE Server Startup Succeeded
