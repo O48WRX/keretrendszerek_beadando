@@ -8,6 +8,10 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 
 import com.ekke.entities.Processzor;
@@ -27,7 +31,7 @@ public class ProcesszorEJB implements ProcesszorEJBLocal {
     }
     
     @PersistenceContext
-    EntityManager em;
+    private static EntityManager em = Persistence.createEntityManagerFactory("JPA").createEntityManager();
     
 	@Override
 	public List<Processzor> getList() {
