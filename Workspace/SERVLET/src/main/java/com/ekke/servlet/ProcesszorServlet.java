@@ -59,7 +59,10 @@ public class ProcesszorServlet extends HttpServlet {
 	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		int id = Integer.parseInt(request.getParameter("id"));
+		int ar = Integer.parseInt(request.getParameter("ar"));
+		String nev = request.getParameter("nev");
+		ejbSource.updateProcesszor(id, ar, nev);
 	}
 
 	/**
