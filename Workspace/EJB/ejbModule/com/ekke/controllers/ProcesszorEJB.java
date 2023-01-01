@@ -56,6 +56,7 @@ public class ProcesszorEJB implements ProcesszorEJBLocal {
 		Processzor proc = em.find(Processzor.class, id);
 		proc.setAr(ar);
 		proc.setNev(nev);
+		em.merge(proc);
 		t.commit();
 	}
 

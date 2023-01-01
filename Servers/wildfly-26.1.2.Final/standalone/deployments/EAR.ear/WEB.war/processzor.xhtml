@@ -13,10 +13,10 @@
 	<hr></hr>
 	<h2>>Add processor</h2>
 	<form method="POST" action="http://localhost:8080/SERVLET/ProcesszorServlet">
-		<p>Id: <input type="text" name="id" value="id" readonly="readonly" id="idField"></input></p>
-		<p>Name: <input type="text" name="nev"></input>></p>
-		<p>Price: <input type="text" name="ar"></input></p>
-		<p><input type="submit" value="Beküldés"></input><input type="button" value="Törlés" onclick="sendDelete()"></input></p>
+		<p>Id: <input type="text" name="id" value="" readonly="readonly" id="idField"></input></p>
+		<p>Name: <input type="text" name="nev" id="nevField"></input>></p>
+		<p>Price: <input type="text" name="ar" id="arField"></input></p>
+		<p><input type="submit" value="Beküldés"></input><input type="button" value="Törlés" onclick="sendDelete()"></input><input type="button" value="Frissít" onclick="sendPut()"></input></p>
 	</form>
 	<hr></hr>
 	<h2>Processors in storage</h2>
@@ -85,7 +85,34 @@
 				var xhr = new XMLHttpRequest();
 				var id = document.getElementById("idField")
 				
+				if(id.value == "")
+					return
+				
 				xhr.open('DELETE', "http://localhost:8080/SERVLET/ProcesszorServlet"+"?id="+id.value, true);
+				xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+				xhr.onload = function () {
+				    // do something to response
+				    console.log(this.responseText);
+				};
+				
+				xhr.send(null)
+				location.reload()
+			}
+
+			function sendPut() {
+				console.log("entered function sendPut")
+				var xhr = new XMLHttpRequest();
+				var id = document.getElementById("idField")
+				
+				if(id.value == "")
+					return
+				
+				
+				var nev = document.getElementById("nevField")
+				var ar = document.getElementById("arField")
+				var ampersand = "&amp;"
+				
+				xhr.open('PUT', "http://localhost:8080/SERVLET/ProcesszorServlet"+"?id="+id.value+ampersand+"nev="+nev.value+ampersand+"ar="+ar.value, true);
 				xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 				xhr.onload = function () {
 				    // do something to response
