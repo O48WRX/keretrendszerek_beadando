@@ -6,6 +6,7 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 
 import com.ekke.entities.Processzor;
@@ -26,7 +27,7 @@ public class RamEJB implements RamEJBLocal {
     }
     
     @PersistenceContext
-    EntityManager em;
+    private static EntityManager em = Persistence.createEntityManagerFactory("JPA").createEntityManager();
 
 	@Override
 	public List<Ram> getList() {
@@ -50,6 +51,7 @@ public class RamEJB implements RamEJBLocal {
 		t.begin();
 		Ram ram = em.find(Ram.class, id);
 		ram.setNev(nev);
+		em.merge(ram);
 		t.commit();
 	}
 
