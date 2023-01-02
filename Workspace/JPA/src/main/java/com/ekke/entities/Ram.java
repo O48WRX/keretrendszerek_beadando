@@ -15,12 +15,12 @@ public class Ram implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	@Override
 	public String toString() {
-		return "Ram [id=" + id + ", nev=" + nev + "]";
+		return "id=" + id + ", nev=" + nev +"";
 	}
 
 	private String nev;

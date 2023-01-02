@@ -14,7 +14,7 @@ public class Rig implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	//bi-directional many-to-one association to Processzor
@@ -68,7 +68,7 @@ public class Rig implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Rig [id=" + id + ", processzor=" + processzor + ", ram=" + ram + ", vga=" + vga + "]";
+		return "id=" + id + ", processzor=" + processzor.getId() + ", ram=" + ram.getId() + ", vga=" + vga.getId() +"";
 	}
 	
 	

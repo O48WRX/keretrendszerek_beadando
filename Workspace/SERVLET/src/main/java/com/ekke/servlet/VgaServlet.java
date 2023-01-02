@@ -39,7 +39,7 @@ public class VgaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Vga> list = ejbSource.getList();
 		for(Vga p : list) {
-			response.getWriter().append(p.toString());
+			response.getWriter().append(p.toString() + ", ");
 		}
 	}
 

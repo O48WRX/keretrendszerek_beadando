@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition template="">
+	</ui:composition>
+	
+	<h:head></h:head> 
+	<body> 
+	<h1>VGAs</h1>
+	<hr></hr>
+	<h2>>Add VGA</h2>
+	<form method="POST" action="http://localhost:8080/SERVLET/VgaServlet">
+		<p>Id: <input type="text" name="id" value="" readonly="readonly" id="idField"></input></p>
+		<p>Name: <input type="text" name="nev" id="nevField"></input>></p>
+		<p><input type="submit" value="Beküldés"></input><input type="button" value="Törlés" onclick="sendDelete()"></input><input type="button" value="Frissít" onclick="sendPut()"></input></p>
+	</form>
+	<hr></hr>
+	<h2>Processors in storage</h2>
+	
+	<table id="contentTable">
+		<tr>
+			<th>Id</th>
+			<th>VGA</th>
+			<th>Edit Button</th>
+		</tr>
+		<script>
+			var url = "http://localhost:8080/SERVLET/VgaServlet"
+			var responseData
+			var responseArray
+
+			function httpGet(theUrl)
+			{
+			    var xmlHttp = new XMLHttpRequest();
+			    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+			    xmlHttp.send( null );
+			    return xmlHttp.responseText;
+			} 
+
+			responseData = httpGet(url)
+			console.log(responseData)
+			
+			responseArray = responseData.split(',')
+			console.log(responseArray)
+			
+			var table = document.getElementById("contentTable")
+			
+			for(var i = 0; i &lt; responseArray.length - 1; i++) {
+				var row = table.insertRow()
+				var cell = row.insertCell()
+				var cell1 = row.insertCell()
+				var cell2 = row.insertCell()
+				
+				var splitData = responseArray[i].split('=')
+				var storedId = splitData[1]
+
+				cell.innerHTML = splitData[1]
+				var splitData = responseArray[i + 1].split('=')
+				cell1.innerHTML = splitData[1]
+
+				var btn = document.createElement('input')
+				btn.type = "button";
+				btn.value = "Edit"
+				btn.name = storedId
+				btn.onclick = function () {
+					var idField = document.getElementById("idField")
+					idField.value = event.srcElement.name
+				}
+				cell2.appendChild(btn)
+				
+				
+				i = i + 1
+			}
+
+
+
+			function sendDelete() {
+				var xhr = new XMLHttpRequest();
+				var id = document.getElementById("idField")
+				
+				if(id.value == "")
+					return
+				
+				xhr.open('DELETE', "http://localhost:8080/SERVLET/VgaServlet"+"?id="+id.value, true);
+				xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+				xhr.onload = function () {
+				    // do something to response
+				    console.log(this.responseText);
+				};
+				
+				xhr.send(null)
+				location.reload()
+			}
+
+			function sendPut() {
+				console.log("entered function sendPut")
+				var xhr = new XMLHttpRequest();
+				var id = document.getElementById("idField")
+				
+				if(id.value == "")
+					return
+				
+				
+				var nev = document.getElementById("nevField")
+				var ar = document.getElementById("arField")
+				var ampersand = "&amp;"
+				
+				xhr.open('PUT', "http://localhost:8080/SERVLET/VgaServlet"+"?id="+id.value+ampersand+"nev="+nev.value, true);
+				xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+				xhr.onload = function () {
+				    // do something to response
+				    console.log(this.responseText);
+				};
+				
+				xhr.send(null)
+				location.reload()
+			}
+			
+		</script>
+	</table>
+	
+	</body>
+	
+</html>

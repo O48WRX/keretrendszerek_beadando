@@ -39,7 +39,7 @@ public class RamServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Ram> list = ejbSource.getList();
 		for(Ram p : list) {
-			response.getWriter().append(p.toString());
+			response.getWriter().append(p.toString() + ", ");
 		}
 	}
 

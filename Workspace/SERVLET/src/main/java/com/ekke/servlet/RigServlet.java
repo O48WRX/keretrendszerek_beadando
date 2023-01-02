@@ -38,7 +38,7 @@ public class RigServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Rig> list = ejbSource.getList();
 		for(Rig p : list) {
-			response.getWriter().append(p.toString());
+			response.getWriter().append(p.toString() + ", ");
 		}
 	}
 
@@ -46,22 +46,29 @@ public class RigServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		int processzor_id = Integer.parseInt(request.getParameter("processzor_id"));
+		int ram_id = Integer.parseInt(request.getParameter("ram_id"));
+		int vga_id = Integer.parseInt(request.getParameter("vga_id"));
+		ejbSource.createRig(processzor_id, ram_id, vga_id);
 	}
 
 	/**
 	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		int id = Integer.parseInt(request.getParameter("id"));
+		int processzor_id = Integer.parseInt(request.getParameter("processzor_id"));
+		int ram_id = Integer.parseInt(request.getParameter("ram_id"));
+		int vga_id = Integer.parseInt(request.getParameter("vga_id"));
+		ejbSource.updateRig(id, processzor_id, ram_id, vga_id);
 	}
 
 	/**
 	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		int id = Integer.parseInt(request.getParameter("id"));
+		ejbSource.deleteRig(id);
 	}
 
 }

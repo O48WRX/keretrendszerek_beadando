@@ -13,6 +13,6 @@ import com.ekke.entities.Vga;
 public interface RigEJBLocal {
 	public List<Rig> getList();
 	public void deleteRig(int id);
-	public void updateRig(int id, Processzor processzor, Ram ram, Vga vga);
-	public void createRig(Processzor processzor, Ram ram, Vga vga);
+	public void updateRig(int id, int processor_id, int ram_id, int vga_id);
+	public void createRig(int processzo_idr, int ram_id, int vga_id);
 }
