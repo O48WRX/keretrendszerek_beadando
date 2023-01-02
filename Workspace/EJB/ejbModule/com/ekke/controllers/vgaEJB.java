@@ -6,6 +6,7 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 
 import com.ekke.entities.Processzor;
@@ -23,7 +24,7 @@ public class vgaEJB implements vgaEJBLocal {
      */
 	
 	@PersistenceContext
-    EntityManager em;
+	private static EntityManager em = Persistence.createEntityManagerFactory("JPA").createEntityManager();
 	
     public vgaEJB() {
         // TODO Auto-generated constructor stub
@@ -51,6 +52,7 @@ public class vgaEJB implements vgaEJBLocal {
 		t.begin();
 		Vga vga = em.find(Vga.class, id);
 		vga.setNev(nev);
+		em.merge(vga);
 		t.commit();
 	}
 
